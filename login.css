@@ -1,0 +1,171 @@
+.account{
+    height:calc(100vh + 75px);
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.account form{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    background-color:hsl(0 100% 0% / 0.8);
+    backdrop-filter: blur(0.5px);
+    padding:3em;
+    border-radius:10px;
+    box-shadow:0 0 15px 10px grey;
+    overflow:hidden;
+}
+.account p, .account small{
+    color:white;
+}
+.account p {
+    text-shadow:-1.5px 0 #EE1D52, 1.5px 0 #69C9D0;
+}
+.account form div{
+    display:grid;
+    grid-template-columns: auto auto;
+    margin:0 40px
+}
+.account form div:first-child{
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+}
+.account form div:first-child > *{
+    margin:40px auto;
+}
+.account form div:last-child> *{
+    margin:8px 5px;
+    line-height:30px;
+}
+.account form img{
+    animation: rotateImage 5s ease infinite;
+}
+.account form span{
+    position: relative;
+    isolation: isolate;
+}
+.account form span label{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translate(5%,-50%);
+    transition:all 0.5s ease-in-out;
+    line-height:22px;
+    font-family:Dosis
+}
+label[for="dob"]{
+    display:none;
+}
+label[for="dob"].active{
+    display:block;
+}
+.account form input{
+    padding-top:0.5em;
+    border-radius:5px;
+}
+.account form span input:focus + label, label.active{
+    display:block;
+    transform:translate(5px, -30px)!important;
+    background-color: white;
+    border-left:1.5px solid #69C9D0;
+    border-right:1.5px solid #69C9D0;
+    padding:0 0.5em;
+}
+/*     #11a519 for success    */
+.account form span input:focus, input.active{
+    border:2px solid #69C9D0;
+    outline:none;
+    text-indent:5px;
+}
+.account form.err{
+    border-color:#ff0000!important;
+}
+form.err i{
+    background-color:#ff0000!important;
+}
+.account form.complete{
+    border-color:#11a519!important;
+}
+form.complete i{
+    background-color:#11a519!important;
+}
+.account i{
+    isolation: isolate;
+    position:absolute;
+    width:150px;
+    height:1px;
+    transform:rotate(-45deg) scale(2.5) translate(-10%, -4500%);
+}
+.account input.err{
+    border:2px solid #ff0000!important;
+}
+.account input.err + label.active{
+    border-left:1.5px solid #ff0000!important;
+    border-right:1.5px solid #ff0000!important;
+}
+.account input.err:focus{
+    border:2px solid #69C9D0;
+}
+.account input.err:focus + label.active{
+    border-left:1.5px solid #69C9D0;
+    border-right:1.5px solid #69C9D0;
+}
+
+
+.account input.complete{
+    border:2px solid #11a519!important;
+}
+.account input.complete + label.active{
+    border-left:1.5px solid #11a519!important;
+    border-right:1.5px solid #11a519!important;
+}
+.account input.complete:focus{
+    border:2px solid #69C9D0;
+}
+.account input.complete:focus + label.active{
+    border-left:1.5px solid #69C9D0;
+    border-right:1.5px solid #69C9D0;
+}
+.account input[type=date]{
+    width:100%;
+}
+
+dialog{
+display:none;
+position: relative;
+grid-column-start:1;
+grid-column-end:3;
+width:95%;
+padding: 0 1em;
+}
+dialog span{
+    display:flex;
+    position: absolute !important;;
+    color:white;
+    top:-0.5em;
+    right:-0.5em;
+    transform: scale(1.08);
+    height:20px;
+    justify-content: center;
+    align-items: center;
+    width:20px;
+    cursor:pointer;
+    border-radius:5px;
+    background-color:red
+}
+@keyframes rotateImage{
+100%{
+    transform: rotate(360deg);
+}
+
+}
+@media screen and (max-width:41em){
+    .account form{
+        flex-direction:column;
+    }
+    i{
+        height:2px!important;
+    }
+}

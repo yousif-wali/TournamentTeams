@@ -1,0 +1,10 @@
+{
+"teams":[
+{"id":"32","name":"Alpha","members":"2","total_wins":"0","total_losses":"0","created":"2022-07-04"},
+{"id":"33","name":"Beta","members":"2","total_wins":"0","total_losses":"0","created":"2022-07-04"},
+{"id":"34","name":"Charlie","members":"0","total_wins":"0","total_losses":"0","created":"2022-07-04"},
+{"id":"35","name":"Delta","members":"0","total_wins":"0","total_losses":"0","created":"2022-07-04"},
+{"id":"36","name":"Echo","members":"0","total_wins":"0","total_losses":"0","created":"2022-07-04"},
+{"id":"37","name":"Fox","members":"0","total_wins":"0","total_losses":"0","created":"2022-07-04"},
+{"id":"38","name":"Vacancy","members":"1","total_wins":"0","total_losses":"0","created":"2022-07-04"}
+]}
